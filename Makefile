@@ -65,3 +65,8 @@ clean :
 
 install :
 	install -C bin/rpcd /usr/rpcd
+	install -C obj/rpcd.o /obj/rpcd.o
+	install -C obj/libaquaero5.o /obj/libaquero5.o
+	install -C lib/libaquaero5.so /lib/libaquaero5.so
+	install -C lib/libaquaero5.a /lib/libaquaero5.a
+
