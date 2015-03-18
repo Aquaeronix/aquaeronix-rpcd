@@ -48,13 +48,13 @@ As the Aquaero5(R) identifies itself as multiple devices (USB keyboard, mouse an
 In my case, there is `/dev/usb/hiddev[0-2]` which all match the udev rule provided above. The correct one for me is `/dev/usb/hiddev0`, but I don't know whether it is always the first one. Just try as stated under USAGE - if you choose the wrong one there will simply be no output at all.
 
 
-USAGE: rpcd
+USAGE: aerocli-rpcd
 ----------------
-Aquaeronix-rpcd, as stated above, is a JSON RPC server that allows for easy data polling in third party applications, possibly over a network connection.
+Aquaeronix-aerocli-rpcd, as stated above, is a JSON RPC server that allows for easy data polling in third party applications, possibly over a network connection.
 
-To start it, simply call the binary (`./bin/rpcd` from project root).
+To start it, simply call the binary (`./bin/aerocli-rpcd` from project root).
 
-To change the TCP port `aq5rpcd` listens on (default: 9090), use the `-p` parameter.
+To change the TCP port `aerocli-rpcd` listens on (default: 9090), use the `-p` parameter.
  
 
 BUGS / CONTACT
