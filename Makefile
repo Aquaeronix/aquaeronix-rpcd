@@ -37,18 +37,18 @@ LIB_OBJS=obj/libaquaero5.o
 
 .PHONY: all default clean 
 
-default : bin/rpcd
+default : bin/aerocli-rpcd
 
-all : bin/rpcd lib/libaquaero5.a lib/libaquaero5.so
+all : bin/aerocli-rpcd lib/libaquaero5.a lib/libaquaero5.so
 
-bin/rpcd: obj/rpcd.o obj/libaquaero5.o
+bin/aerocli-rpcd: obj/aerocli-rpcd.o obj/libaquaero5.o
 	$(CC) $(CFLAGS) -L $(JRPCC_PREFIX)/lib -ljsonrpcc -o $@ $^
   
 obj/libaquaero5.o: libaquaero5.c libaquaero5.h \
 		aquaero5-user-strings.h aquaero5-offsets.h
 	$(CC) $(CFLAGS) -fPIC -o $@ -c $<
 
-obj/rpcd.o: rpcd.c $(JRPCC_PREFIX)/include/jsonrpc-c.h
+obj/aerocli-rpcd.o: aerocli-rpcd.c $(JRPCC_PREFIX)/include/jsonrpc-c.h
 	$(CC) $(CFLAGS) -I $(JRPCC_PREFIX)/include -I /usr/include/libev/ -o $@ -c $<
 
 
@@ -61,11 +61,11 @@ lib/libaquaero5.so: $(LIB_OBJS)
 	$(CC) -shared -o $@ $^
 
 clean :
-	rm -f bin/rpcd obj/*.o lib/*.a lib/*.so
+	rm -f bin/aerocli-rpcd obj/*.o lib/*.a lib/*.so
 
 install :
-	install -C bin/rpcd /usr/rpcd
-	install -C obj/rpcd.o /obj/rpcd.o
+	install -C bin/aerocli-rpcd /usr/aerocli-rpcd
+	install -C obj/aerocli-rpcd.o /obj/aerocli-rpcd.o
 	install -C obj/libaquaero5.o /obj/libaquero5.o
 	install -C lib/libaquaero5.so /lib/libaquaero5.so
 	install -C lib/libaquaero5.a /lib/libaquaero5.a
