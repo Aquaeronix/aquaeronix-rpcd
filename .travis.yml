@@ -1,5 +1,6 @@
 language: c
 install:
+  - sudo apt-get install -y libev-dev libev4 libc6
   - wget https://github.com/hmng/jsonrpc-c/archive/arma_stable.tar.gz 
   - tar xvzf arma_stable.tar.gz
   - cd jsonrpc-c-arma_stable
