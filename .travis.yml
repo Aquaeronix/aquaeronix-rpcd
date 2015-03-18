@@ -1,4 +1,12 @@
 language: c
+install:
+    - wget https://github.com/hmng/jsonrpc-c/archive/arma_stable.tar.gz 
+  - tar xvzf jsonrpc-c-arma_stable.tar.gz
+  - cd jsonrpc-c-arma_stable
+  - autoreconf -i
+  - ./configure
+  - make
+  - make install
 compiler:
   - gcc
 #  - clang
