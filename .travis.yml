@@ -6,7 +6,7 @@ install:
   - tar xvzf arma_stable.tar.gz
   - cd jsonrpc-c-arma_stable
   - autoreconf -i
-  - ./configure --prefix=/usr && make && make install
+  - ./configure --prefix=/usr && make && sudo make install
 compiler:
   - gcc
 #  - clang
