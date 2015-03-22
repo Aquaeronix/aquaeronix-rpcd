@@ -7,6 +7,7 @@ install:
   - cd jsonrpc-c-arma_stable
   - autoreconf -i
   - ./configure --prefix=/usr && make && sudo make install
+  - cd ..
 compiler:
   - gcc
 #  - clang
