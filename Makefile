@@ -23,7 +23,7 @@ CFLAGS = -Wall -ansi -std=gnu99 -pedantic -I /usr/include -O2
 
 $(shell   mkdir -p bin/ obj/ lib/)
 
-JRPCC_PREFIX = /usr
+JRPCC_PREFIX = /usr/local
 
 # Uncomment this if you want to debug
 #CFLAGS += -D'DEBUG=TRUE'
