@@ -62,6 +62,7 @@ lib/libaquaero5.so: $(LIB_OBJS)
 
 clean :
 	rm -f bin/aerocli-rpcd obj/*.o lib/*.a lib/*.so
+	rmdir bin/ obj/ lib/
 
 install :
 	install -C bin/aerocli-rpcd /usr/aerocli-rpcd
