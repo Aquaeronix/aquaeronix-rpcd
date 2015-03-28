@@ -28,9 +28,9 @@ kernel via the `/dev/usb/hiddev?` device nodes, so no dependencies for this.
 
 BUILDING
 ----------------
-To build the JSON RPC server `aquaeronix-rpcd`, issue `make all` in the project root. Be sure to install `jsonrpc-c` first, and point to its prefix using the `JRPC_PREFIX` environment variable if not installing to `/usr`.
+To build the JSON RPC server `aquaeronix-rpcd`, issue `make` in the project root. Be sure to install `jsonrpc-c` first, and point to its prefix using the `JRPC_PREFIX` environment variable if not installing to `/usr`.
 
-You need the JSON RPC server `jsonrpc-c` by Henrique Gomes (hmng). It is available under MIT license on GitHub: https://github.com/hmng/jsonrpc-c.
+You need the JSON RPC server `jsonrpc-c` by Henrique Gomes (hmng). It is available under MIT license on GitHub: https://github.com/hmng/jsonrpc-c. Precompiled RPMs for the JSON RPC server are available on the [barracks510 repositories](http://unintel.tk). 
 
 
 SETUP
